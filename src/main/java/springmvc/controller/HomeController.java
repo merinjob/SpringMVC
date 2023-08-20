@@ -8,12 +8,15 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+//@RequestMapping("/first")
 public class HomeController {
 
 	@RequestMapping("/home")
+//	@RequestMapping(path = "/home", method=RequestMethod.GET)
 	public String home(Model model) {
 		System.out.println("This is home url");
 		model.addAttribute("name","Knox");
@@ -39,7 +42,7 @@ public class HomeController {
 	public ModelAndView help() {
 		System.out.println("This is help controller");
 		
-		//Creatinf model & view object
+		//Creating model & view object
 		ModelAndView modelAndView = new ModelAndView();
 		//setting the data
 		modelAndView.addObject("name","Elsa Aiden");
