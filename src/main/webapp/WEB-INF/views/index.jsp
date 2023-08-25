@@ -15,6 +15,7 @@
 	String name = (String) request.getAttribute("name");
 	Integer id = (Integer) request.getAttribute("id");
 	List<String> friends = (List<String>) request.getAttribute("f");
+			
 	%>
 
 	<h1>
@@ -27,7 +28,7 @@
 	<%
 	for (String s : friends) {
 	%>
-	
+
 	<h1><%=s%></h1>
 
 	<%
